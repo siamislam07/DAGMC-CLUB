@@ -4,9 +4,11 @@ import Center from "../../utilits/Center";
 
 
 const Home = () => {
+
+
     return (
         <>
-            <FirstImage/>
+            <FirstImage />
             <SecendImage/> 
             <panelImage/>
             
