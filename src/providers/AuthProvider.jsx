@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { GoogleAuthProvider, onAuthStateChanged, signInWithPopup, signOut } from "firebase/auth"
+import { GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithPopup, signOut } from "firebase/auth"
 import { createContext, useEffect, useState } from "react"
 import { auth } from "../config/firebase.config"
 
@@ -12,6 +12,13 @@ const googleProvider = new GoogleAuthProvider
 const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null)
     const [isItLoading, setIsItLoading] = useState(true)
+
+
+    const createUser = (email, password) => {
+        setIsItLoading(true)
+        return createUserWithEmailAndPassword(auth, email, password)
+
+    }
 
     const googleLogIn = () => {
         return signInWithPopup(auth, googleProvider)
@@ -36,7 +43,7 @@ const AuthProvider = ({ children }) => {
 
     const info = {
         user,
-        googleLogIn,logOut,
+        googleLogIn,logOut,createUser,
     }
 
     return (

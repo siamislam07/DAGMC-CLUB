@@ -8,10 +8,11 @@ import googles from "../../assets/animationJson/google.gif"
 import github from "../../assets/animationJson/github.gif"
 import { AuthContext } from "../../providers/AuthProvider";
 import toast from "react-hot-toast";
+import { updateProfile } from "firebase/auth";
 
 const SignUp = () => {
 
-    const { googleLogIn } = useContext(AuthContext)
+    const { googleLogIn, createUser } = useContext(AuthContext)
 
     const navigate = useNavigate()
     const options = {
@@ -31,6 +32,39 @@ const SignUp = () => {
         e.preventDefault()
         const user = { name, email, url, password }
         console.log(user);
+        
+        if (password.length < 6) {
+            // setError('Password should be at least 6 characters or longer')
+            toast.error('Password should be at least 6 characters or longer')
+            return
+        }
+        else if (!/[A-Z]/.test(password)) {
+            toast.error('Password should have at least one upper case')
+            return
+        }
+        else if (!/[^a-zA-Z0-9._-]/.test(password)) {
+            toast.error('Password should have at least one special character')
+            return
+        }
+        
+
+        createUser(email, password)
+            .then(result => {
+                updateProfile(result.user, {
+                    displayName: name,
+                    photoURL: url
+                })
+                .then()
+                .catch()
+                toast.success("Register Successful")
+                navigate(location?.state ? location.state : '/')
+                e.target.reset()
+            })
+            .catch(error => {
+                console.log(error.message);
+                toast.error(error.message)
+                e.target.reset()
+            })
     }
 
     const handleGoogleLogIn = () => {
@@ -39,7 +73,7 @@ const SignUp = () => {
                 toast.success('Register Complete')
                 navigate(location?.state ? location.state : '/')
             })
-            .catch(error=>{
+            .catch(error => {
                 console.log(error);
                 toast.error(error.message)
             })
@@ -59,7 +93,11 @@ const SignUp = () => {
                         <hr className="w-8  " />
                         {/* <p className="text-sm mt-4">By creating an account or signing in, you understand and agree to Indeed's Terms. You also acknowledge our Cookie and Privacy policies.</p> */}
 
-                        <form className="flex flex-col gap-2" onSubmit={handleRegister}>
+                        <form className="flex md:block lg:block  flex-col gap-2" onSubmit={handleRegister}>
+                            {/* <div class="input-field">
+                                <input type="text" id="name" required />
+                                <label for="name">Your name:</label>
+                            </div> */}
                             <input className="p-2  px-3 w-72 ring-1 duration-300 ring-violet-600 mt-8 rounded-xl border hover:shadow-lg" type="text" name="name" placeholder="Your name" onBlur={e => setName(e.target.value)} required />
                             <input className="p-2  px-3 w-72 ring-1 duration-300 ring-violet-600 mt-8 rounded-xl border hover:shadow-lg" type="email" name="email" placeholder="E-mail" onChange={e => setEmail(e.target.value)} required />
                             <input className="p-2  px-3 w-72 ring-1 duration-300 ring-violet-500 mt-7 rounded-xl border hover:shadow-lg" type="url" name="url" placeholder="PhotoUrl" onBlur={e => setUrl(e.target.value)} required />

@@ -8,7 +8,7 @@ const FirstImage = () => {
 
     <>
     
-      <div className="hero ">
+      <div className="hero">
         <div className="hero-content justify-between gap-20 flex-col lg:flex-row-reverse relative bg-gray-800 border-2 border-gray-800 bg-transparent py-2.5 px-5 font-medium uppercase transition-colors before:absolute before:left-0 before:top-0 before:-z-10 before:h-full text-white before:w-full before:origin-top-left before:scale-x-0 before:bg-[#ff5f5fa1] before:transition-transform before:duration-300 before:content-[''] hover:text-black before:hover:scale-x-100 ">
           <img src={club_image} className='w-auto max-w-sm rounded-lg shadow-2xl	box-shadow: 80 25px 50px -12px rgb(5 5 5 / 500) shadow-[#00f7ff] ' />
           <div>
@@ -18,7 +18,7 @@ const FirstImage = () => {
               Get Started
             </button>
 
-            <button className="relative bg-gray-800 border-2 border-gray-800 bg-transparent py-2.5 px-5 font-medium uppercase transition-colors before:absolute before:left-0 before:top-0 before:-z-10 before:h-full text-white before:w-full before:origin-top-left before:scale-x-0 before:bg-[#00f7ff] before:transition-transform before:duration-300 before:content-[''] hover:text-black before:hover:scale-x-100 border-white">
+            <button className="relative bg-gray-800 border-2 rounded-lg bg-transparent py-2.5 px-5 font-medium uppercase transition-colors before:absolute before:left-0 before:top-0 before:-z-10 before:h-full text-white before:w-full before:origin-top-left before:scale-x-0 before:bg-[#00f7ff] before:transition-transform before:duration-300 before:content-[''] hover:text-black before:hover:scale-x-100 border-white">
               About Us
             </button>
 
