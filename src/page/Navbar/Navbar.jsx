@@ -1,4 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
+import club_logho from '../../image/shawon logho.png'
 
 const Navbar = () => {
     const navLinks = <>
@@ -28,9 +29,9 @@ const Navbar = () => {
                         </ul>
                     </div>
 
-                    <div className="avatar  sm:block">
-                        <div className="w-24  rounded-3xl ">
-                            <img className="" src={'https://th.bing.com/th/id/OIP.TnaniGd08VS-OBcSoLLlZQHaGL?rs=1&pid=ImgDetMa'} />
+                    <div className="avatar  sm:block  shadow-[#00f7ff]">
+                        <div className="w-28  rounded-3xl  shadow-[#00f7ff]">
+                            <img className=" shadow-[#00f7ff]" src={club_logho} />
                         </div>
                     </div>
 

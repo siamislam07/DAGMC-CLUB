@@ -1,34 +1,8 @@
-import React from 'react';
+
 import { Link } from 'react-router-dom';
 
 const Login = () => {
-    const blinkStyle = {
-        background: '#2c4766',
-        borderRadius: '8px',
-        width: '32px',
-        height: '6px',
-        position: 'absolute',
-        left: 0,
-        transformOrigin: '128px',
-        animation: 'animateBlink 3s linear infinite',
-    };
-
-    // Define the keyframes for the blinking animation
-    const animateBlinkKeyframes = `
-        @keyframes animateBlink {
-            0% {
-                background: #0ef;
-            }
-            25% {
-                background: #2c4766;
-            }
-        }
-    `;
-
-    // Create a style tag for the keyframes
-    const styleTag = document.createElement('style');
-    styleTag.appendChild(document.createTextNode(animateBlinkKeyframes));
-    document.head.appendChild(styleTag);
+    
 
     return (
         <div className="pt-24">
@@ -41,8 +15,8 @@ const Login = () => {
                     </button>
                     <span className="mb-2 text-gray-900">Or</span>
                     <form >
-                        <input onChange={e => setEmail(e.target.value)} type="email" className="w-full px-6 py-3 mb-2 border border-slate-600 rounded-lg font-medium " placeholder="Email" />
-                        <input onBlur={e => setPassword(e.target.value)} type="password" className="w-full px-6 py-3 mb-2 border border-slate-600 rounded-lg font-medium " placeholder="Password"  />
+                        <input onChange={e => (e.target.value)} type="email" className="w-full px-6 py-3 mb-2 border border-slate-600 rounded-lg font-medium " placeholder="Email" />
+                        <input onBlur={e => (e.target.value)} type="password" className="w-full px-6 py-3 mb-2 border border-slate-600 rounded-lg font-medium " placeholder="Password"  />
                         <button className="bg-slate-500 hover:bg-slate-700 text-white text-base rounded-lg py-2.5 px-5 transition-colors w-full text-[19px]">Log In</button>
                     </form>
 

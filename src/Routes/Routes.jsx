@@ -7,6 +7,7 @@ import Home from "../page/Home/Home";
 
 
 
+
 const router = createBrowserRouter([
     {
         path:"/",
@@ -23,8 +24,9 @@ const router = createBrowserRouter([
             },
             {
                 path:'/signup',
-                element:<SignUp/>
+                element:<SignUp/>,
             }
+            
         ]
     }
 ])
