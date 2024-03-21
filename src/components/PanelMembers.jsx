@@ -5,9 +5,9 @@ const PanelMembers = () => {
         <div className="w-full max-w-6xl mx-auto">
             <div className="grid grid-cols-1  sm:grid-cols-2 md:grid-cols-3 
         lg:grid-cols-3  gap-12 mb-24">
-                {[1, 2, 3, 4, 5,6].map((run, i) => (
+                {[1, 2, 3, 4, 5, 6].map((run, i) => (
 
-                    <div to={'`/room/${room?._id}`'} className='col-span-1 cursor-pointer group'>
+                    <div key={i} to={'`/room/${room?._id}`'} className='col-span-1 cursor-pointer group'>
                         <div className='flex flex-col gap-2 w-full'>
                             <div
                                 className='aspect-square w-full relative 
