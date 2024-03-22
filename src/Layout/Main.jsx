@@ -16,7 +16,7 @@ const Main = () => {
         }, 2000)
     },[])
     return (
-        <div>
+        <>
             {loading? <Loader/>:<>
             <Navbar/>
 
@@ -29,7 +29,7 @@ const Main = () => {
             <Footer/>
             </>
             }
-        </div>
+        </>
     );
 };
 

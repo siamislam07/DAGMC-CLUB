@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
-import club_logho from '../../image/shawon_logho.png'
+import club_logho from '../../image/DAGMC.png'
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import NavBarProfile from "../../components/NavBarProfile";
@@ -16,7 +16,7 @@ const Navbar = () => {
 
 
     //darkMode functions
-    const [theme, setTheme] = useState(localStorage.getItem("theme") ? localStorage.getItem("theme") : "light")
+    const [theme, setTheme] = useState(localStorage.getItem("theme") ? localStorage.getItem("theme") : "synthwave")
     const handleChange = e => {
         if (e.target.checked) {
             setTheme("synthwave")
@@ -47,14 +47,14 @@ const Navbar = () => {
         <li><NavLink to='/panel-member' className="btn btn-outline btn-default   border-b-lime-600  border-neutral transition transform hover:-translate-y-3 motion-reduce:transition-none motion-reduce:hover:transform-none  hover:bg-[#00f7ff] hover:border-none">Panel Member </NavLink></li>
 
         {
-            user?'' : <>
+            user ? '' : <>
                 <li><NavLink to='/login' className="btn btn-outline btn-default    border-b-amber-600 border-neutral normal-case text-lg  transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none  hover:bg-[#00f7ff] hover:border-none">Login </NavLink></li>
 
                 <li><NavLink to='/SignUp' className="btn btn-outline btn-default    border-b-amber-300 border-neutral normal-case text-lg  transition transform hover:-translate-y-3 motion-reduce:transition-none motion-reduce:hover:transform-none hover:bg-[#00f7ff] hover:border-none">Create Account</NavLink></li>
             </>
         }
-        <li><NavLink to='/' className='btn btn-outline btn-default   border-b-red-800 border-neutral transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none hover:bg-[#00f7ff] hover:border-none'>Join Our Club</NavLink></li>
-        <NavBarProfile/>
+        <li><NavLink to='/' className='btn btn-outline btn-default   border-b-red-800 border-neutral transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none hover:bg-[#00f7ff] hover:border-none'>Gallery</NavLink></li>
+        <NavBarProfile />
 
         {/* <button className="relative bg-gray-800 border-2 border-gray-800 bg-transparent py-2.5 px-5 font-medium uppercase  transition-colors before:absolute before:left-0 before:top-0 before:-z-10 before:h-full text-white before:w-full before:origin-top-left before:scale-x-0 before:bg-[#00f7ff] before:transition-transform before:duration-300 before:content-[''] hover:text-black before:hover:scale-x-100">button one</button> */}
     </>
@@ -81,6 +81,7 @@ const Navbar = () => {
 
                     {/* <Link to='/' className="btn btn-ghost normal-case text-base   md:text-xl lg:text-xl ">DAGMC CLUB</Link> */}
                 </div>
+                
                 <div className="navbar-end hidden lg:flex">
                     <ul className="menu menu-horizontal gap-4">
                         {navLinks}
