@@ -106,12 +106,12 @@ signUpInput_name:invalid {
 
 input:focus,
 input:valid {
-    border-color: #00dd22;
+    border-color: #00f7ff;
 }
 
 input:focus~signUpName_label,
 input:valid~signUpInput_name {
     font-size: 14px;
     top: -24px;
-    color: #00dd22;
+    color: #00f7ff;
 }

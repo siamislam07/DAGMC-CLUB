@@ -1,6 +1,11 @@
+import Aos from "aos";
+import { useEffect } from "react";
+import 'aos/dist/aos.css';
 
 const About = () => {
-
+    useEffect(() => {
+        Aos.init({ duration: 2000 })
+    }, [])
 
     const data = [
         {
@@ -75,20 +80,20 @@ const About = () => {
         
     ]
 
-
+   
 
     return (
         <div className="w-full max-w-6xl mx-auto">
             {/* <h1 className="text-4xl text-center font-bold">Our Class Service</h1> */}
-            <img className="border-t border-b mx-auto" src="https://capsule-render.vercel.app/api?type=venom&height=305&color=gradient&text=Our%20Service&textBg=false&animation=fadeIn" alt="" />
+            <img className="border-t border-b mx-auto" src="https://capsule-render.vercel.app/api?type=venom&height=305&color=gradient&text=Facilities%20Of%20Debating&textBg=false&animation=fadeIn&stroke=00f7ff&strokeWidth=-1" alt="" />
             <div className="w-full  max-w-6xl mx-auto p-3">
 
                 <div className="grid  grid-cols-1  sm:grid-cols-2 md:grid-cols-3 
-                                     lg:grid-cols-3  gap-10 mb-28 mx-auto">
+                                    lg:grid-cols-3  gap-10 mb-28 mx-auto">
 
                     {
                         data.map((item, i) => (
-                            <div key={i} className={`card ${item?.commonClass} ${item?.hoverClass}`}>
+                            <div data-aos="fade-right" key={i} className={`card ${item?.commonClass} ${item?.hoverClass}`}>
                                 <div className="card-body">
                                     <h2 className="card-title">{item?.title}</h2>
                                     <p>{item?.description}</p>

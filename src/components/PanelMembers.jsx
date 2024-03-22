@@ -48,7 +48,7 @@ const PanelMembers = () => {
     return (
         <div className="w-full max-w-6xl mx-auto">
 
-            <div className='col-span-1 mx-auto group mb-20 '>
+            <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500" className='col-span-1 mx-auto group mb-20 mt-24 '>
                 <div className='flex  mx-auto flex-col gap-2 w-80 border border-[#00f7ff] shadow-lg shadow-teal-500 rounded-2xl'>
                     <div className='aspect-square w-full relative overflow-hidden rounded-xl'>
                         <img className='object-cover  h-80 p-3 w-full group-hover:scale-110 transition'
@@ -89,7 +89,9 @@ const PanelMembers = () => {
 
                 {data.map((item, i) => (
 
-                    <div key={i} className='col-span-1 mx-auto group mb-20'>
+                    <div data-aos="fade-down"
+                        data-aos-easing="linear"
+                        data-aos-duration="1600" key={i} className='col-span-1 mx-auto group mb-20'>
                         <div className='flex  mx-auto flex-col gap-2 w-80 border border-[#00f7ff] shadow-2xl shadow-teal-500 rounded-2xl'>
                             <div className='aspect-square w-full relative overflow-hidden rounded-xl'>
                                 <img className='object-cover  h-80 p-3 w-full group-hover:scale-110 transition'
@@ -105,21 +107,21 @@ const PanelMembers = () => {
                                 {item?.title}
                             </div>
                             <div className='avatar mt-2'>
-                            <div className="w-8 ml-4 rounded-full    ring-offset-2">
-                                <a href={item?.fbUrl} target="_blank" rel="noopener noreferrer">
-                                    <img src={fb} alt="Facebook" className='cursor-pointer' />
-                                </a>
-                            </div>
-                            <div className="w-8 ml-4 rounded-full    ring-offset-2">
-                                <a href={item?.fbUrl} target="_blank" rel="noopener noreferrer">
-                                    <img src={insta} alt="Facebook" className='cursor-pointer' />
-                                </a>
-                            </div>
-                            <div className="w-8 ml-4 rounded-full    ring-offset-2">
-                                <a href={item?.fbUrl} target="_blank" rel="noopener noreferrer">
-                                    <img src={wp} alt="Facebook" className='cursor-pointer' />
-                                </a>
-                            </div>
+                                <div className="w-8 ml-4 rounded-full    ring-offset-2">
+                                    <a href={item?.fbUrl} target="_blank" rel="noopener noreferrer">
+                                        <img src={fb} alt="Facebook" className='cursor-pointer' />
+                                    </a>
+                                </div>
+                                <div className="w-8 ml-4 rounded-full    ring-offset-2">
+                                    <a href={item?.fbUrl} target="_blank" rel="noopener noreferrer">
+                                        <img src={insta} alt="Facebook" className='cursor-pointer' />
+                                    </a>
+                                </div>
+                                <div className="w-8 ml-4 rounded-full    ring-offset-2">
+                                    <a href={item?.fbUrl} target="_blank" rel="noopener noreferrer">
+                                        <img src={wp} alt="Facebook" className='cursor-pointer' />
+                                    </a>
+                                </div>
                             </div>
                             <div className='flex flex-row justify-end items-end gap-1 mb-4 mr-4'>
                                 <div className='flex flex-col items-center gap-2'>
@@ -144,8 +146,8 @@ const PanelMembers = () => {
                                         <input type="radio" name="rating-3" className="mask mask-heart bg-red-400" />
                                         <input type="radio" name="rating-3" className="mask mask-heart bg-orange-400" />
                                         <input type="radio" name="rating-3" className="mask mask-heart bg-yellow-400" />
-                                        <input type="radio" name="rating-3" className="mask mask-heart bg-lime-400" checked/>
-                                        <input type="radio" name="rating-3" className="mask mask-heart bg-green-400"  />
+                                        <input type="radio" name="rating-3" className="mask mask-heart bg-lime-400" checked />
+                                        <input type="radio" name="rating-3" className="mask mask-heart bg-green-400" />
                                     </div>
                                 </div>
                             </div>
