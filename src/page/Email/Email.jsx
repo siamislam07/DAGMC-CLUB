@@ -31,18 +31,20 @@ const Email = () => {
                 <form className="space-y-6" onSubmit={'sendEmail'}>
                     <div>
                         <label className="text-sm">Full name</label>
-                        <input id="name" name='from_name' type="text" placeholder="" className="w-full p-3 rounded border " />
+                        {/* <input   type="text" name="name" placeholder="Your name" className="w-full p-3  ring-1 rounded border ring-violet-800" /> */}
+                        <input className="p-2  px-3 w-full ring-1  ring-violet-600 mt-2 rounded-xl border hover:shadow-lg" type="text" name="name" placeholder="Your name"  required />
                     </div>
                     <div>
                         <label className="text-sm">Email</label>
-                        <input id="email" name='from_email' type="email" className="w-full p-3 rounded border " />
+                        {/* <input id="email" name='from_email' type="email" className="w-full p-3  ring-1 ring-violet-600 rounded border " /> */}
+                        <input className="p-2  px-3 w-full ring-1  ring-violet-600 mt-2 rounded-xl border hover:shadow-lg" type="text" name="name" placeholder="Your Email"  required />
                     </div>
 
                     <div>
                         <label className="text-sm">Message</label>
-                        <textarea aria-expanded={false} id="message" name='message' rows="3" className="w-full p-3 rounded border border-[#00f7ff]"></textarea>
+                        <textarea  aria-expanded={false} id="message" name='message' rows="3" className="w-full p-3 rounded border ring-1 ring-violet-600 " ></textarea>
                     </div>
-                    <button type="submit" className="w-full p-3 text-sm font-bold  uppercase rounded bg-violet-400 text-gray-900">Send Message</button>
+                    <button type="submit"  className="w-full p-3 text-sm font-bold  uppercase rounded bg-violet-400 text-gray-900">Send Message</button>
                 </form>
             </div>
         </div>

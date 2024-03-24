@@ -13,7 +13,7 @@ const About = () => {
             description: "Debating hones critical thinking by requiring participants to analyze arguments, identify logical fallacies, and evaluate evidence to support their claims. This skill is valuable not only in debate but also in everyday decision-making and problem-solving.",
             commonClass: "card bg-[#00f7ff] text-primary-content mt-28 hero-content   border-2 border-[#00f7ff] transition-colors shadow-2xl",
 
-            hoverClass: "before:absolute  before:origin-top-left before:-z-10 before:h-full before:w-full  before:scale-y-0 before:bg-[#e11d48] before:rounded-xl before:transition-transform before:duration-500  hover:text-white before:hover:scale-y-100 shadow-teal-500"
+            hoverClass: "before:absolute  before:origin-top-left before:-z-10 before:h-full before:w-full  before:scale-y-0 before:bg-[#0a8c91] before:rounded-xl before:transition-transform before:duration-500  hover:text-white before:hover:scale-y-100 shadow-teal-500"
         },
         {
             title: "2.Public Speaking Abilities",
@@ -21,21 +21,21 @@ const About = () => {
 
             commonClass: "card bg-[#00f7ff] text-primary-content mt-28 hero-content   border-2 border-[#00f7ff] transition-colors shadow-2xl",
 
-            hoverClass: "before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:rounded-xl before:origin-top-left before:scale-y-0 before:bg-[#a855f7] before:transition-transform before:duration-500 hover:text-white before:hover:scale-y-100 shadow-teal-500"
+            hoverClass: "before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:rounded-xl before:origin-top-left before:scale-y-0 before:bg-[#0a8c91] before:transition-transform before:duration-500 hover:text-white before:hover:scale-y-100 shadow-teal-500"
         },
         {
             title: "3.Research Skills",
             description: " Engaging in debates necessitates thorough research to gather evidence, statistics, and examples to support one's arguments. Participants learn how to navigate various sources, assess credibility, and synthesize information effectively.",
             commonClass: "card bg-[#00f7ff] text-primary-content mt-28 hero-content border-2 border-[#00f7ff] transition-colors shadow-2xl",
 
-            hoverClass: "before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:rounded-xl before:origin-top-left before:scale-y-0 before:bg-[#4f46e5] before:transition-transform before:duration-500 hover:text-white before:hover:scale-y-100 shadow-teal-500"
+            hoverClass: "before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:rounded-xl before:origin-top-left before:scale-y-0 before:bg-[#0a8c91] before:transition-transform before:duration-500 hover:text-white before:hover:scale-y-100 shadow-teal-500"
         },
         {
             title: "4.Empathy and Understanding",
             description: "Debating exposes individuals to diverse perspectives and encourages them to consider alternative viewpoints. This fosters empathy, understanding, and tolerance towards differing opinions, promoting constructive dialogue and mutual respect",
             commonClass: "card bg-[#00f7ff] text-primary-content  hero-content   border-2 border-[#00f7ff] transition-colors shadow-2xl",
 
-            hoverClass: "before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:rounded-xl before:origin-top-left before:scale-y-0 before:bg-[#df19c4] before:transition-transform before:duration-500 hover:text-white before:hover:scale-y-100 shadow-teal-500"
+            hoverClass: "before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:rounded-xl before:origin-top-left before:scale-y-0 before:bg-[#0a8c91] before:transition-transform before:duration-500 hover:text-white before:hover:scale-y-100 shadow-teal-500"
         },
         {
             title: "5.Conflict Resolution Skills",
@@ -43,14 +43,14 @@ const About = () => {
 
             commonClass: "card bg-[#00f7ff] text-primary-content  hero-content   border-2 border-[#00f7ff] transition-colors shadow-2xl",
 
-            hoverClass: "before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:rounded-xl before:origin-top-left before:scale-y-0 before:bg-[#85a00f] before:transition-transform before:duration-500 hover:text-white before:hover:scale-y-100 shadow-teal-500"
+            hoverClass: "before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:rounded-xl before:origin-top-left before:scale-y-0 before:bg-[#0a8c91] before:transition-transform before:duration-500 hover:text-white before:hover:scale-y-100 shadow-teal-500"
         },
         {
             title: "6.Persuasion Techniques",
             description: "Persuasion Techniques Debating requires participants to use persuasive techniques such as ethos, pathos, and logos to influence the audience's opinions and attitudes. Mastering these techniques enhances one's ability to advocate for their beliefs and persuade others effectively.",
             commonClass: "card bg-[#00f7ff] text-primary-content  hero-content   border-2 border-[#00f7ff] transition-colors shadow-2xl",
 
-            hoverClass: "before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:rounded-xl before:origin-top-left before:scale-y-0 before:bg-[#491b25] before:transition-transform before:duration-500 hover:text-white before:hover:scale-y-100 shadow-teal-500"
+            hoverClass: "before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:rounded-xl before:origin-top-left before:scale-y-0 before:bg-[#0a8c91] before:transition-transform before:duration-500 hover:text-white before:hover:scale-y-100 shadow-teal-500"
 
         },
         {
@@ -58,7 +58,7 @@ const About = () => {
             description: "Confidence Building Through regular practice and feedback, debating boosts individuals' confidence in expressing their ideas and engaging in intellectual discourse. This confidence extends beyond the debate arena and positively impacts various aspects of their lives.",
             commonClass: "card bg-[#00f7ff] text-primary-content  hero-content   border-2 border-[#00f7ff] transition-colors shadow-2xl",
 
-            hoverClass: "before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:rounded-xl before:origin-top-left before:scale-y-0 before:bg-[#bb7814] before:transition-transform before:duration-500 hover:text-white before:hover:scale-y-100 shadow-teal-500"
+            hoverClass: "before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:rounded-xl before:origin-top-left before:scale-y-0 before:bg-[#0a8c91] before:transition-transform before:duration-500 hover:text-white before:hover:scale-y-100 shadow-teal-500"
 
         },
         {
@@ -66,7 +66,7 @@ const About = () => {
             description: "Lastly, debating instills a love for learning and intellectual curiosity as participants delve into diverse topics, explore new ideas, and engage in rigorous intellectual exchange. This passion for learning extends beyond formal education and enriches one's personal and professional growth throughout life.",
             commonClass: "card bg-[#00f7ff] text-primary-content hero-content   border-2 border-[#00f7ff] transition-colors shadow-2xl",
 
-            hoverClass: "before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:rounded-xl before:origin-top-left before:scale-y-0 before:bg-[#7f15b1] before:transition-transform before:duration-500 hover:text-white before:hover:scale-y-100 shadow-teal-500"
+            hoverClass: "before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:rounded-xl before:origin-top-left before:scale-y-0 before:bg-[#0a8c91] before:transition-transform before:duration-500 hover:text-white before:hover:scale-y-100 shadow-teal-500"
 
         },
         {

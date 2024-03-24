@@ -98,9 +98,9 @@ const SignUp = () => {
                                 <input type="text" id="name" required />
                                 <label for="name">Your name:</label>
                             </div> */}
-                            <input className="p-2  px-3 w-72 ring-1 duration-300 ring-violet-600 mt-8 rounded-xl border hover:shadow-lg" type="text" name="name" placeholder="Your name" onBlur={e => setName(e.target.value)} required />
+                            <input className="p-2  px-3 w-72 ring-1  ring-violet-600 mt-8 rounded-xl border hover:shadow-lg" type="text" name="name" placeholder="Your name" onBlur={e => setName(e.target.value)} required />
                             <input className="p-2  px-3 w-72 ring-1 duration-300 ring-violet-600 mt-8 rounded-xl border hover:shadow-lg" type="email" name="email" placeholder="E-mail" onChange={e => setEmail(e.target.value)} required />
-                            <input className="p-2  px-3 w-72 ring-1 duration-300 ring-violet-500 mt-7 rounded-xl border hover:shadow-lg" type="url" name="url" placeholder="PhotoUrl" onBlur={e => setUrl(e.target.value)} required />
+                            {/* <input className="p-2  px-3 w-72 ring-1 duration-300 ring-violet-500 mt-7 rounded-xl border hover:shadow-lg" type="url" name="url" placeholder="PhotoUrl" onBlur={e => setUrl(e.target.value)} required /> */}
                             <input className="p-2  px-3 w-72 ring-1 duration-300 ring-violet-500 mt-7 rounded-xl border hover:shadow-lg" type="password" name="password" placeholder="Password" onBlur={e => setPassword(e.target.value)} required />
                             <button type="submit" className="bg-gradient-to-r w-72  from-violet-600 to-indigo-600 text-white font-semibold rounded-xl py-2 mt-5 shadow-lg hover:scale-105 duration-300">Register</button>
                         </form>

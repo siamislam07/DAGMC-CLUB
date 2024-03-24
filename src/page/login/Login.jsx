@@ -5,10 +5,10 @@ import Center from '../../utilits/Center';
 import { useContext, useState } from "react"
 import { useLottie } from "lottie-react";
 import img from "../../assets/animationJson/login.json"
-import { MdOutlineEmail } from "react-icons/md";
-import { RiLockPasswordLine } from "react-icons/ri";
+// import { MdOutlineEmail } from "react-icons/md";
+// import { RiLockPasswordLine } from "react-icons/ri";
 import googles from "../../assets/animationJson/google.gif"
-import github from "../../assets/animationJson/github.gif"
+// import github from "../../assets/animationJson/github.gif"
 import { AuthContext } from '../../providers/AuthProvider';
 import toast from 'react-hot-toast';
 
@@ -44,6 +44,21 @@ const Login = () => {
             })
     }
 
+    const handleLogin = e => {
+        e.preventDefault()
+        login(email, password)
+        .then(result=>{
+            console.log(result);
+            toast.success('Login Successful')
+            navigate(location?.state ? location.state : '/')
+        })
+        .catch(error=>{
+            console.log(error);
+            toast.error('Please Try With Google')
+            toast.error(error.message)
+        })
+    }
+
     return (
         <Center>
 
@@ -57,11 +72,11 @@ const Login = () => {
                         <h2 className="font-bold text-3xl mt-5">Login</h2>
                         <p className="text-sm mt-4 mb-12">By creating an account or signing in, you understand and agree to Indeed's Terms. You also acknowledge our Cookie and Privacy policies.</p>
 
-                        <form className="flex flex-col gap-2" onSubmit={'handleLogin'}>
+                        <form className="flex flex-col gap-2" onSubmit={handleLogin}>
 
                             <div class="container">
                                 <div class="inputbox">
-                                    <input type="text" required />
+                                    <input onChange={e => setEmail(e.target.value)} type="text" required />
                                     <span>E-mail</span>
                                     <i></i>
                                 </div>
@@ -70,7 +85,7 @@ const Login = () => {
 
                             <div class="container">
                                 <div class="inputbox">
-                                    <input type="password" required />
+                                    <input onBlur={e => setPassword(e.target.value)} type="password" required />
                                     <span>Password</span>
                                     <i></i>
                                 </div>

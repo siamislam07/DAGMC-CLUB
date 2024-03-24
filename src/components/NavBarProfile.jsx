@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { AuthContext } from "../providers/AuthProvider";
+import { Link } from "react-router-dom";
 
 
 const NavBarProfile = () => {
@@ -22,10 +23,10 @@ const NavBarProfile = () => {
                     </label>
                     <ul tabIndex={0} title={user?.displayName} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-64">
                         <li>
-                            <a className="justify-between">
+                            <Link to="/profile" className="justify-between">
                                 Profile
                                 <span className="badge">{user?.displayName ? user?.displayName : user?.email}</span>
-                            </a>
+                            </Link>
                         </li>
 
                         <li><a onClick={handleLogOut} className="">Logout</a></li>

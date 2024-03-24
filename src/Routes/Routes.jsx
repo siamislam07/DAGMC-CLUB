@@ -5,6 +5,7 @@ import SignUp from "../page/Signup/SignUp";
 import Home from "../page/Home/Home";
 import Panel from "../page/Panel/Panel";
 import ErrorPage from "../page/errorPage/ErrorPage";
+import Profile from "../page/Profile/Profile";
 
 
 
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
                 path:'/panel-member',
                 element:<Panel/>
 
+            },
+            {
+                path:'/profile',
+                element:<Profile/>
             }
             
         ]

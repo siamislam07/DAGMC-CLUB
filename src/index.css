@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+
+textarea{
+    resize:none
+}
 /* for login */
 
 .container {
@@ -106,10 +110,11 @@ signUpInput_name:invalid {
 
 input:focus,
 input:valid {
-    border-color: #00f7ff;
+    border-color: #00ff40;
 }
 
 input:focus~signUpName_label,
+input:focus~signUpName_text,
 input:valid~signUpInput_name {
     font-size: 14px;
     top: -24px;
