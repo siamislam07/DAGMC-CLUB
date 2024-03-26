@@ -1,5 +1,5 @@
 import Center from "../../utilits/Center";
-
+import MessengerCustomerChat from 'react-messenger-customer-chat';
 const Footer = () => {
   return (
     <div className="border-t">
@@ -20,6 +20,11 @@ const Footer = () => {
         </nav>
       </footer>
     </Center>
+    <MessengerCustomerChat
+        pageId="268524179676667"
+        appId="1112761916427890"
+
+      />
     </div>
 
   );

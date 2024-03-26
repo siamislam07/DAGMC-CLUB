@@ -50,7 +50,7 @@ const Navbar = () => {
             user ? '' : <>
                 <li><NavLink to='/login' className="btn btn-outline btn-default    border-b-amber-600 border-neutral normal-case text-lg  transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none  hover:bg-[#00f7ff] hover:border-none">Login </NavLink></li>
 
-                <li><NavLink to='/SignUp' className="btn btn-outline btn-default    border-b-amber-300 border-neutral normal-case text-lg  transition transform hover:-translate-y-3 motion-reduce:transition-none motion-reduce:hover:transform-none hover:bg-[#00f7ff] hover:border-none">Create Account</NavLink></li>
+                <li><NavLink to='/e-workshop' className="btn btn-outline btn-default    border-b-amber-300 border-neutral normal-case text-lg  transition transform hover:-translate-y-3 motion-reduce:transition-none motion-reduce:hover:transform-none hover:bg-[#00f7ff] hover:border-none">E- WorkShop</NavLink></li>
             </>
         }
         <li><NavLink to='/' className='btn btn-outline btn-default   border-b-red-800 border-neutral transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none hover:bg-[#00f7ff] hover:border-none'>Gallery</NavLink></li>
@@ -61,10 +61,10 @@ const Navbar = () => {
 
     return (
         <div className=" bg-inherit  navbar z-10 shadow-2xl  ">
-            <div className="w-full max-w-[1700px] items-center  mx-auto   xl:px-20 md:px-10 sm:px-2 px-4">
+            <div className="w-full max-w-[1400px] mx-auto    xl:px-30 md:px-10 sm:px-2 px-4">
 
                 <div className="navbar-start ">
-                    <div className="dropdown">
+                    <div className="dropdown lg:hidden md:hidden">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                         </label>
@@ -73,16 +73,18 @@ const Navbar = () => {
                         </ul>
                     </div>
 
+                </div>
+                <div className="navbar-start  gap-5 flex items-center ">
                     <div className="avatar  sm:block  shadow-[#00f7ff]">
                         <div className="w-28  rounded-3xl  shadow-[#00f7ff]">
-                            <img className=" shadow-[#00f7ff]" src={club_logho} />
+                            <img className="flex" src={club_logho} />
                         </div>
                     </div>
 
-                    {/* <Link to='/' className="btn btn-ghost normal-case text-base   md:text-xl lg:text-xl ">DAGMC CLUB</Link> */}
+                    <Link to='/' className="btn btn-ghost normal-case text-base   md:text-xl lg:text-xl ">DAGMC CLUB</Link>
                 </div>
-                
-                <div className="navbar-end hidden lg:flex">
+
+                <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal gap-4">
                         {navLinks}
                     </ul>

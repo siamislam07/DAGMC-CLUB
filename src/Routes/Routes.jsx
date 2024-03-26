@@ -6,6 +6,7 @@ import Home from "../page/Home/Home";
 import Panel from "../page/Panel/Panel";
 import ErrorPage from "../page/errorPage/ErrorPage";
 import Profile from "../page/Profile/Profile";
+import PrivateRoute from "./PrivateRoute";
 
 
 
@@ -36,7 +37,7 @@ const router = createBrowserRouter([
             },
             {
                 path:'/profile',
-                element:<Profile/>
+                element:<PrivateRoute><Profile/></PrivateRoute>
             }
             
         ]

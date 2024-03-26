@@ -1,9 +1,12 @@
+import { useContext } from "react";
 import { Navigate, useLocation } from "react-router-dom";
-import useAuth from "../hooks/useAuth";
-import { toast } from "react-toastify";
+
+
+import { AuthContext } from "../providers/AuthProvider";
+import toast from "react-hot-toast";
 
 const PrivateRoute = ({ children }) => {
-    const { isItLoading, user } = useAuth()
+    const { isItLoading, user } = useContext(AuthContext)
     const location = useLocation()
     console.log(location);
     if (isItLoading) {
